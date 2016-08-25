@@ -1,22 +1,24 @@
 execute pathogen#infect()
-syntax on
-filetype plugin indent on
 let g:jsx_ext_required = 0
 
+syntax enable
+set background=dark
+colorscheme solarized
+
+filetype plugin indent on
 inoremap jk <ESC>
 let mapleader = ","
 map <leader>m :NERDTree<cr>
 set number
 set hlsearch
 map <leader>/ :nohlsearch<Bar>:echo<cr>
-map <leader>p "0p
-map <leader>P "0P
-nnoremap <C-E> <C-Y>
-nnoremap <C-W> <C-E>
+map <leader>p "+p
+map <leader>P "+P
+nnoremap <C-W> <C-Y>
 nnoremap <C-Y> <C-W>
-autocmd Filetype sql setlocal shiftwidth=2 tabstop=2 expandtab
-autocmd Filetype scheme setlocal shiftwidth=2 tabstop=2 expandtab
-autocmd Filetype javascript setlocal shiftwidth=2 tabstop=2 expandtab
-autocmd BufNewFile,BufReadPost *.jsx setlocal shiftwidth=2 tabstop=2 expandtab
-autocmd Filetype java setlocal shiftwidth=2 tabstop=2 expandtab
-autocmd Filetype tex setlocal shiftwidth=2 tabstop=2 expandtab
+set shiftwidth=4 tabstop=4 expandtab
+autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType html setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType eruby setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType css setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType scss setlocal shiftwidth=2 tabstop=2 expandtab
